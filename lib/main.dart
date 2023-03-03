@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_demo/widgets/about_me_widget.dart';
 import 'package:portfolio_demo/widgets/home_widget.dart';
+import 'package:portfolio_demo/widgets/resume_widget.dart';
 import 'package:portfolio_demo/widgets/side_nav_drawer.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorSchemeSeed: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -56,8 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
               children: [
                 HomeWidget(key: homeKey),
-                AboutMeWidget(bgColor: Colors.blue, key: aboutKey),
-                AboutMeWidget(bgColor: Colors.red, key: resumeKey),
+                AboutMeWidget(bgColor: Colors.black26, key: aboutKey),
+                ResumeWidget(bgColor: Colors.red, key: resumeKey),
               ],
             )),
           )
